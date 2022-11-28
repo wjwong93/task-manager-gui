@@ -1,14 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueCookies from 'vue-cookies'
 import HomeView from '../views/HomeView.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
+import Dashboard from '../views/Dashboard.vue'
 
 Vue.use(VueRouter)
+Vue.use(VueCookies)
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register
+  },
+  {
+    path: '/home',
+    name: 'dashboard',
+    component: Dashboard
   },
   {
     path: '/about',
