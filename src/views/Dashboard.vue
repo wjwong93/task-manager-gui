@@ -741,7 +741,7 @@ export default {
       let formData = new FormData()
       formData.append('password', this.deleteUserForm.password)
 
-      axios.put(`${this.api}/user/delete`, formData, { withCredentials: true }).then(res => {
+      axios.post(`${this.api}/user/delete`, formData, { withCredentials: true }).then(res => {
         if (res.status === 200)
           this.logout()
       }).catch(err => {
